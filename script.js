@@ -1,6 +1,6 @@
 var swiper = new Swiper (".myswiper-1",{
-    slidesPerview:1,
-    spaceBetween: 10,
+    slidesPerView:1,
+    spaceBetween: 30,
     loop:true,
     pagination:{
         el:".swiper-pagination",
@@ -13,7 +13,7 @@ var swiper = new Swiper (".myswiper-1",{
 });
 
 var swiper = new Swiper (".myswiper-2",{
-    slidesPerview:3,
+    slidesPerView:3,
     spaceBetween: 20,
     loop:true,
     loopFillGroupWhitBlank:true,
@@ -21,28 +21,30 @@ var swiper = new Swiper (".myswiper-2",{
         nextEl:".swiper-button-next",
         prevEl:".swiper-button-prev",
     },
-    breakpoints:{
+
+    breakpoints : {
         0:{
-            slidesPerview:1,
+            slidesPerView:1,
         },
         520:{
-            slidesPerview:2,
+            slidesPerView:2,
         },
         950:{
-            slidesPerview:3,
+            slidesPerView:3,
         }
     }
     
 });
 
-const tabInputs = document.querySelectorAll(".tabInput");
+let tabInputs = document.querySelectorAll(".tabInput");
 
 tabInputs.forEach(function(input){
 
     input.addEventListener("change", function() {
-        const id = input.ariaValueMax;
-        const thiswiper = document.getElementById("swiper"+ id);
-        thiswiper.swiper.update();
+        let id = input.ariaValueMax;
+        let thisSwiper = document.getElementById("swiper"+ id);
+        thisSwiper.swiper.update();
     })
+    
 });
 
