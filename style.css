@@ -212,13 +212,17 @@ body {
     padding-top: 25px;
 }
 
-.tabs input[type="radio"]{
+.tabs Input[type="radio"]{
   display: none;
 }
 
-.tabs input[type="radio"]:checked + label {
+.tabs Input[type="radio"]:checked + label {
   border-bottom: 2px solid red;
   color: white;
+}
+
+.tabs input[type="radio"]:checked + label + .tab{
+  display: block;
 }
 
 .product{
